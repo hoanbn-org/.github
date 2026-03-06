@@ -1,0 +1,118 @@
+name: "[1] Epic - Business Objective"
+description: High-level business objective spanning multiple sprints (2-6 sprints)
+title: "[EPIC] "
+labels: ["type: epic", "status: planning"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Epic Guidelines
+        An Epic represents a large body of work that delivers significant business value.
+        It will be broken down into multiple User Stories.
+
+  - type: input
+    id: epic_id
+    attributes:
+      label: Epic ID
+      description: Reference ID (e.g., E2024-001)
+      placeholder: E2024-XXX
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low
+        - Normal
+        - High
+        - Urgent
+        - Immediate
+    validations:
+      required: true
+
+  - type: textarea
+    id: business_value
+    attributes:
+      label: 🎯Overview & Goal
+      description: What business problem does this Epic solve?
+      placeholder: |
+        As a [stakeholder]
+        I want [objective]
+        So that [business benefit]
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope & Features
+      description: High-level list of features/capabilities
+      placeholder: |
+        - Feature 1: User authentication system
+        - Feature 2: Dashboard analytics
+        - Feature 3: Reporting module
+    validations:
+      required: true
+  
+  - type: textarea
+    id: uepic_references
+    attributes:
+      label: 🔗 References & Dependencies
+      placeholder: |
+            - Design: [Link Figma]
+            - Documentation ver VI: 
+            - Documentation ver JP:
+      value: |
+            - Design: [Link Figma]
+            - Documentation ver VI: 
+            - Documentation ver JP:
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Epic Acceptance Criteria
+      description: What must be true for this Epic to be considered complete?
+      placeholder: |
+        - All child User Stories are completed
+        - Integration testing passed
+        - Performance benchmarks met
+        - Documentation completed
+        - Stakeholder sign-off received
+
+  # # -type: input
+  #   id: target_release
+  #   attributes:
+  #     label: Target Release/Sprint
+  #     description: When should this Epic be completed?
+  #     placeholder: Q1 2025 / Sprint 15-18
+
+  # - type: textarea
+  #   id: dependencies
+  #   attributes:
+  #     label: Dependencies & Risks
+  #     description: External dependencies, technical risks, or blockers
+  #     placeholder: |
+  #       Dependencies:
+  #       - Third-party API integration
+  #       - Infrastructure upgrade
+
+  #       Risks:
+  #       - Technical complexity
+  #       - Resource availability
+
+  # - type: checkboxes
+  #   id: epic_checklist
+  #   attributes:
+  #     label: Epic Definition of Ready
+  #     description: Ensure Epic is ready for breakdown
+  #     options:
+  #       - label: Business value is clearly defined
+  #       - label: Success criteria are measurable
+  #       - label: High-level scope is documented
+  #       - label: Stakeholders are identified
+  #       - label: Dependencies are understood
+
